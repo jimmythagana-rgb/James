@@ -1,0 +1,74 @@
+export default function Page() {
+  return (
+    <main className="bg-[#0a0a0a] text-white min-h-screen font-sans">
+      <div className="max-w-6xl mx-auto px-6 py-4 border border-zinc-800 rounded-full mt-6 flex justify-between items-center">
+        <span className="font-black text-2xl tracking-tighter">JT.</span>
+        <span className="text-zinc-400 text-[11px] tracking-[0.2em] hidden md:block">WORK • ABOUT • PROJECTS • CONTACT</span>
+        <a href="tel:0725277325" className="text-xs bg-white text-black px-4 py-1.5 rounded-full font-semibold">0725277325</a>
+      </div>
+
+      <section className="max-w-6xl mx-auto px-6 py-16 md:py-24">
+        <h1 className="text-5xl md:text-7xl font-bold leading-[0.9]">James Thagana</h1>
+        <h2 className="text-3xl md:text-4xl text-zinc-500 mt-2 font-medium">Full-Stack Developer</h2>
+        <p className="text-zinc-400 mt-6 max-w-xl text-[15px] leading-relaxed">
+          Building scalable web apps, APIs, and cloud solutions with modern technologies.<br/>
+          BSc Computer Science, Maseno University • MSc AI, Open University of Kenya.<br/>
+          Based in Eldoret, Kenya. Specializing in Real Estate Systems, Banking & M-Pesa.
+        </p>
+        
+        <div className="flex gap-3 mt-8">
+          <a href="#projects" className="bg-white text-black px-6 py-3 rounded-xl font-semibold text-sm">View Projects →</a>
+          <a href="mailto:jimmythagana@gmail.com" className="border border-zinc-700 px-6 py-3 rounded-xl text-sm hover:bg-zinc-900">jimmythagana@gmail.com</a>
+        </div>
+
+        <p className="text-[11px] tracking-[0.3em] text-zinc-500 mt-20 mb-4">TECH STACK</p>
+        <div className="flex flex-wrap gap-2 text-xs">
+          {["React","TypeScript","Node.js","Python","PostgreSQL","Docker","AWS","Tailwind CSS","Next.js","M-Pesa API"].map(t=>(
+            <span key={t} className="bg-zinc-900 border border-zinc-800 px-4 py-2 rounded-full">{t}</span>
+          ))}
+        </div>
+
+        <div id="projects">
+          <p className="text-[11px] tracking-[0.3em] text-zinc-500 mt-16 mb-6">SELECTED PROJECTS</p>
+          <div className="grid md:grid-cols-3 gap-5">
+            <div className="bg-[#171717] border border-zinc-800 p-6 rounded-2xl">
+              <span className="text-[10px] bg-[#2a3a2a] text-green-300 px-3 py-1 rounded-full">FEATURED</span>
+              <h3 className="font-bold text-lg mt-4">Real Estate Management System</h3>
+              <p className="text-[13px] text-zinc-400 mt-2 leading-relaxed">Dolphins Real Estate style system. HR operations, property valuation, rent tracking. Built with React, Node/Express, MongoDB.</p>
+              <div className="flex gap-2 mt-6 text-[11px]">
+                <span className="border border-zinc-700 px-3 py-1 rounded-full">React</span>
+                <span className="border border-zinc-700 px-3 py-1 rounded-full">Express</span>
+                <span className="border border-zinc-700 px-3 py-1 rounded-full">MongoDB</span>
+              </div>
+            </div>
+            <div className="bg-[#171717] border border-zinc-800 p-6 rounded-2xl">
+              <h3 className="font-bold text-lg">Task Management API</h3>
+              <p className="text-[13px] text-zinc-400 mt-2 leading-relaxed">RESTful API for task management with JWT auth, real-time updates, CI/CD pipeline automation reducing deploy time 30%.</p>
+              <div className="flex gap-2 mt-6 text-[11px]">
+                <span className="border border-zinc-700 px-3 py-1 rounded-full">Node.js</span>
+                <span className="border border-zinc-700 px-3 py-1 rounded-full">PostgreSQL</span>
+                <span className="border border-zinc-700 px-3 py-1 rounded-full">Docker</span>
+              </div>
+            </div>
+            <div className="bg-[#171717] border border-zinc-800 p-6 rounded-2xl">
+              <h3 className="font-bold text-lg">Analytics Dashboard</h3>
+              <p className="text-[13px] text-zinc-400 mt-2 leading-relaxed">Real-time data visualization dashboard with interactive charts, improved conversion rates by 15% through optimization.</p>
+              <div className="flex gap-2 mt-6 text-[11px]">
+                <span className="border border-zinc-700 px-3 py-1 rounded-full">Next.js</span>
+                <span className="border border-zinc-700 px-3 py-1 rounded-full">Tailwind</span>
+                <span className="border border-zinc-700 px-3 py-1 rounded-full">GCP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="text-center mt-20 border-t border-zinc-800 pt-10">
+          <h2 className="text-2xl font-semibold">Let's build something</h2>
+          <p className="text-zinc-500 text-sm mt-2">Available for banking fintech & real estate projects</p>
+          <a href="tel:0725277325" className="inline-block mt-6 bg-white text-black px-8 py-3 rounded-full text-sm font-semibold">Call: 0725277325</a>
+          <p className="text-zinc-600 text-xs mt-10">© 2026 James Thagana • Built with focus on performance & clean code</p>
+        </div>
+      </section>
+    </main>
+  )
+}
